@@ -1,0 +1,15 @@
+plugins {
+    id 'base'
+}
+
+task buildFrontend(type: Exec) {
+    workingDir 'user-management-service-web'
+    commandLine 'npm', 'run', 'build'
+}
+
+task cleanFrontend(type: Delete) {
+    delete 'user-management-service-web/build'
+}
+
+clean.dependsOn cleanFrontend
+assemble.dependsOn buildFrontend

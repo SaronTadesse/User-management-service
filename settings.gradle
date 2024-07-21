@@ -3,4 +3,6 @@ include 'user-management-service-controller'
 include 'user-management-service-flow'
 include 'user-management-service-persistance'
 include 'user-management-service-model'
+include 'user-management-service-web'
+
 
